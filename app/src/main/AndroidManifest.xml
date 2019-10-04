@@ -3,9 +3,6 @@
     package="ru.samsung.itschool.book.cells"
     >
 
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="17" />
 
     <application
         android:allowBackup="true"

@@ -1,17 +1,19 @@
 package ru.samsung.itschool.book.cells;
 
-import task.Stub;
-import task.Task;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.Button;
 import android.widget.GridLayout;
+
+
+import task.Stub;
+import task.Task;
 
 public class CellsActivity extends Activity implements OnClickListener,
         OnLongClickListener {
