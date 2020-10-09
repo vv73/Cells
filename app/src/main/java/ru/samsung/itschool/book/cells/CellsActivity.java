@@ -86,7 +86,7 @@ public class CellsActivity extends Activity implements OnClickListener,
         cells = new Button[HEIGHT][WIDTH];
         GridLayout cellsLayout = (GridLayout) findViewById(R.id.CellsLayout);
         cellsLayout.removeAllViews();
-        cellsLayout.setColumnCount(HEIGHT);
+        cellsLayout.setColumnCount(WIDTH);
         for (int i = 0; i < HEIGHT; i++)
             for (int j = 0; j < WIDTH; j++) {
                 LayoutInflater inflater = (LayoutInflater) getApplicationContext()
