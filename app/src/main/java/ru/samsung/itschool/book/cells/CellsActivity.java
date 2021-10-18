@@ -74,11 +74,11 @@ public class CellsActivity extends Activity implements OnClickListener,
 	 * ==================================================
 	 */
 
-    int getX(View v) {
+    int getY(View v) {
         return Integer.parseInt(((String) v.getTag()).split(",")[1]);
     }
 
-    int getY(View v) {
+    int getX(View v) {
         return Integer.parseInt(((String) v.getTag()).split(",")[0]);
     }
 
