@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\android\\Cells\\app\\build\\intermediates\\merged_res\\debug\\layout_cells.xml.flat",
+        "source": "D:\\android\\Cells\\app\\src\\main\\res\\layout\\cells.xml"
+    },
+    {
+        "merged": "D:\\android\\Cells\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher.png.flat",
+        "source": "D:\\android\\Cells\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\android\\Cells\\app\\build\\intermediates\\merged_res\\debug\\layout_cell.xml.flat",
+        "source": "D:\\android\\Cells\\app\\src\\main\\res\\layout\\cell.xml"
+    }
+]
