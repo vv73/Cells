@@ -3,6 +3,7 @@ package ru.samsung.itschool.book.cells;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -39,6 +40,7 @@ public class CellsActivity extends Activity implements OnClickListener,
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++) {
                 cells[i][j].setText("-");
+                cells[i][j].setTextColor(Color.WHITE);
             }
     }
 
@@ -66,11 +68,13 @@ public class CellsActivity extends Activity implements OnClickListener,
         if (cnt % 2 == 0) {
             if (cells[x][y].getText().toString() == "-") {
                 cells[x][y].setText("X");
+                cells[x][y].setTextColor(Color.BLACK);
                 cnt++;
             }
         } else {
             if (cells[x][y].getText().toString() == "-") {
                 cells[x][y].setText("0");
+                cells[x][y].setTextColor(Color.BLACK);
                 cnt++;
             }
         }
