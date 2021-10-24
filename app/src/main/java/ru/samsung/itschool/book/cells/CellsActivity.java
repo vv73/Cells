@@ -60,7 +60,7 @@ public class CellsActivity extends Activity implements OnClickListener,
         int tappedX = getX(tappedCell);
         int tappedY = getY(tappedCell);
 
-            setText(tappedX, tappedY);
+        setText(tappedX, tappedY);
     }
 
 
@@ -81,7 +81,7 @@ public class CellsActivity extends Activity implements OnClickListener,
         if (checkWin(x, y)) {
             youWin();
         }
-        if (cnt == 9){
+        if (cnt == 9) {
             Stub.show(this, "Ничья!");
             cnt = 0;
             makeCells();
@@ -97,39 +97,29 @@ public class CellsActivity extends Activity implements OnClickListener,
     }
 
     public boolean checkd(int x, int y, String check) {
-        System.out.println(check);
-        System.out.println("x: " + (x) + " y: " + (y));
-        if (((String) cells[x][y].getTag()).split(",")[1] == "1") {
-            if (((String) cells[x][y].getTag()).split(",")[0] == "1") {
-                if ((cells[x + 1][y - 1].getText().toString() == check && cells[x - 1][y + 1].getText().toString() == check)
-                        || (cells[x + 1][y + 1].getText().toString() == check && cells[x - 1][y - 1].getText().toString() == check)) {
-                    return true;
-                }
-            }
+        if (cells[0][0].getText().toString() == cells[1][1].getText().toString()
+                && cells[1][1].getText().toString() == cells[2][2].getText().toString()
+                && cells[2][2].getText().toString() == cells[0][0].getText().toString()
+                && cells[0][0].getText().toString() == check) {
+            return true;
         }
-        if (((String) cells[x][y].getTag()).split(",")[1] == "0") {
-            if (((String) cells[x][y].getTag()).split(",")[0] == "2") {
-                if (cells[x - 1][y + 1].getText().toString() == check && cells[x - 2][y + 2].getText().toString() == check) {
-                    return true;
-                }
-            }
-            if (((String) cells[x][y].getTag()).split(",")[0] == "0") {
-                if (cells[x + 1][y + 1].getText().toString() == check && cells[x + 2][y + 2].getText().toString() == check) {
-                    return true;
-                }
-            }
+        else if (cells[0][2].getText().toString() == cells[1][1].getText().toString()
+                && cells[1][1].getText().toString() == cells[2][0].getText().toString()
+                && cells[2][0].getText().toString() == cells[0][2].getText().toString()
+                && cells[2][0].getText().toString() == check) {
+            return true;
         }
-        if (((String) cells[x][y].getTag()).split(",")[1] == "2") {
-            if (((String) cells[x][y].getTag()).split(",")[0] == "2") {
-                if (cells[x - 1][y - 1].getText().toString() == check && cells[x - 2][y - 2].getText().toString() == check) {
-                    return true;
-                }
-            }
-            if (((String) cells[x][y].getTag()).split(",")[0] == "0") {
-                if (cells[x + 1][y - 1].getText().toString() == check && cells[x + 2][y - 2].getText().toString() == check) {
-                    return true;
-                }
-            }
+        else if (cells[0][2].getText().toString() == cells[1][1].getText().toString()
+                && cells[1][1].getText().toString() == cells[0][2].getText().toString()
+                && cells[2][0].getText().toString() == cells[0][2].getText().toString()
+                && cells[0][2].getText().toString() == check) {
+            return true;
+        }
+        else if (cells[0][0].getText().toString() == cells[1][1].getText().toString()
+                && cells[1][1].getText().toString() == cells[2][2].getText().toString()
+                && cells[2][2].getText().toString() == cells[0][0].getText().toString()
+                && cells[0][0].getText().toString() == check) {
+            return true;
         }
         return false;
     }
